@@ -32,7 +32,7 @@ function RouteComponent() {
             <h1>Sean Webb</h1>
             <h2>Embedded Systems Engineer</h2>
             <div id="hero-buttons">
-              <div className="badge">
+              <div class="badge">
                 <VscLocation id="location-icon" />
                 <p>Longmont, CO</p>
               </div>
@@ -40,6 +40,56 @@ function RouteComponent() {
             </div>
           </div>
 
+        </div>
+
+        <div id="content-wrapper">
+          <div id="about" class="main-section stacked-section">
+            
+            <div class="section-header">
+              <h2>About</h2>
+            </div>
+
+            <div class="section-content">
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id. Pretium tellus duis convallis tempus leo eu aenean. Urna tempor pulvinar vivamus fringilla lacus nec metus. Iaculis massa nisl malesuada lacinia integer nunc posuere. Semper vel class aptent taciti sociosqu ad litora. Conubia nostra inceptos himenaeos orci varius natoque penatibus. Dis parturient montes nascetur ridiculus mus donec rhoncus. Nulla molestie mattis scelerisque maximus eget fermentum odio. Purus est efficitur laoreet mauris pharetra vestibulum fusce.
+              </p>
+
+            </div> 
+          </div>
+        </div>
+
+        {/* 
+
+        Current Section Order/Ideas:
+        
+          Hero
+          About
+          Education
+          Projects
+          Skills
+          Resume
+          Experience
+          Contact
+
+        */}
+
+        <div id="content-wrapper">
+          <div id="experience" class="main-section stacked-section">
+            
+            <div class="section-header">
+              <h2>Experience</h2>
+            </div>
+
+            <div class="section-content">
+
+              
+
+            </div> 
+          </div>
         </div>
       </div>
 

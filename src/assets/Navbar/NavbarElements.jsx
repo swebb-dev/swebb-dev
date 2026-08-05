@@ -24,7 +24,7 @@ export const Nav = styled.nav`
   padding: 0.625rem 1.375rem;
   max-width: ${({ $scrollState }) => ($scrollState === "compact" ? "850px" : "1000px")};
   border-radius: 1rem;
-  border: ${({ $scrollState }) => ($scrollState === "compact" ? "2px solid #232a35" : "2px solid transparent")};
+  border: ${({ $scrollState }) => ($scrollState === "compact" ? "1px solid #232a35" : "1px solid transparent")};
   margin: 0 auto;
   
   transition: padding 0.3s ease, background-color 0.3s ease, max-width 0.3s ease;

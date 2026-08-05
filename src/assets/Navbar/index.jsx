@@ -12,7 +12,7 @@ import {
 } from "./NavbarElements";
 
 const SMALL_SCROLL_THRESHOLD = 50;   // below this, always show "top" style
-const LARGE_SCROLL_THRESHOLD = 300;  // past this while scrolling down, hide
+const LARGE_SCROLL_THRESHOLD = 310;  // past this while scrolling down, hide
 
 const Navbar = () => {
   const [scrollState, setScrollState] = useState("top"); // "top", "compact", "hidden"
