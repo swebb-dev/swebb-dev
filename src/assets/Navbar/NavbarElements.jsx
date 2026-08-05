@@ -1,3 +1,5 @@
+// Navbar/NavbarElements.jsx
+
 import styled from "styled-components";
 import { Link } from '@tanstack/react-router';
 
@@ -12,17 +14,19 @@ export const NavWrapper = styled.div`
   font-family: Monospace;
   top: 1.375rem;
   margin-left: 2.5%;
+  backdrop-filter: ${({ $scrollState }) => ($scrollState === "compact" ? "blur(6px)" : "none")}
 `;
 
 export const Nav = styled.nav`
   display: flex;
   align-items: center;
-  background-color: ${({ $scrollState }) => ($scrollState === "compact" ? "#1b1e24" : "")};
+  background-color: ${({ $scrollState }) => ($scrollState === "compact" ? "rgba(18, 22, 29, 0.8)" : "")};
   padding: 0.625rem 1.375rem;
   max-width: ${({ $scrollState }) => ($scrollState === "compact" ? "850px" : "1000px")};
   border-radius: 1rem;
-  border: ${({ $scrollState }) => ($scrollState === "compact" ? "2px solid #545b6b" : "2px solid transparent")};
+  border: ${({ $scrollState }) => ($scrollState === "compact" ? "2px solid #232a35" : "2px solid transparent")};
   margin: 0 auto;
+  
   transition: padding 0.3s ease, background-color 0.3s ease, max-width 0.3s ease;
 `;
 
@@ -68,6 +72,6 @@ export const NavLink = styled(Link)`
   font-family: Monospace;
   
   &:hover {
-    color: #8baae1;
+    color: #7fa8d9;
   }
 `;

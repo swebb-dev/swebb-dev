@@ -1,3 +1,5 @@
+// Navbar/index.jsx
+
 import React, { useState, useEffect, useRef } from "react";
 import {
   NavWrapper,

@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500&display=swap');
+
+:root {
+  --bg-base: #0a0d12;
+  --bg-elevated: #12161d;
+  --text-primary: #e8ecf3;
+  --text-secondary: #8b96a8;
+  --accent: #7fa8d9;
+  --accent-soft: rgba(127, 168, 217, 0.14);
+  --border: #232a35;
+  --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 html,
 body {
   margin: 0;
@@ -5,9 +19,29 @@ body {
 }
 
 body {
-  background: linear-gradient(180deg, #3c5269 0%, #131416 100%);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(127, 168, 217, 0.05), transparent 45%),
+    linear-gradient(180deg, var(--bg-base) 0%, #05070a 100%);
   background-repeat: no-repeat;
-  color: white;
+  background-size: 100% 100%;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  min-height: 100%;
+  background-image:
+    linear-gradient(rgba(127, 168, 217, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(127, 168, 217, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(circle at 50% 0%, black, transparent 70%);
+  mask-image: radial-gradient(circle at 50% 0%, black, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 #navbar-spacer {
@@ -17,8 +51,9 @@ body {
 }
 
 #content-wrapper {
+  position: relative;
+  z-index: 1;
   max-width: 90%;
-  margin-left: 5%;
   margin: 0 auto;
 }
 
@@ -29,7 +64,7 @@ body {
   align-items: center;
   justify-content: center;
   background: transparent;
-  // border: 2px solid #545b6b;
+  border: 2px solid transparent;
   max-width: 950px;
   margin: 0 auto;
 }
@@ -42,7 +77,6 @@ body {
   border: 2px solid #ffffff;
   justify-content: center;
   align-items: center;
-  // transform: translateX(-12px);
   display:flex;
 }
 
@@ -56,31 +90,105 @@ body {
 }
 
 #hero-text {
-    margin-top: 1rem;
-    text-align: center;
-    color: #ffffff;
-    font-family: Monospace;
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  position: relative;
+  z-index: 1;
+  margin-top: 1.75rem;
+  text-align: center;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #hero-text h1 {
-    font-size: 2.25rem;
-    margin: 0;
-    color: #ffffff;
-    font-family: Monospace;
-    font-weight: 600;
-    display: flex;
+  font-size: 2.75rem;
+  line-height: 1.1;
+  margin: 0;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 #hero-text h2 {
-    font-size: 1.25rem;
+  font-size: 1.15rem;
+  margin: 0.6rem 0 0;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.hero-tagline {
+  margin: 1.1rem 0 0;
+  max-width: 34rem;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+#hero-buttons {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(18, 22, 29, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+#hero-buttons p {
     margin: 0;
-    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 1.125rem;
     color: #ffffff;
     font-family: Monospace;
-    font-weight: 500;
+    font-weight: 400;
     display: flex;
+    align-items: center;
+    font-family: Monospace;
+}
+
+#hero-buttons svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #ffffff;
+}
+
+.badge p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.badge svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  color: var(--accent);
+}
+
+#hero-buttons a {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    font-family: Monospace;
+}
+
+#github-icon {
+    margin-left: 1.5rem;
 }
