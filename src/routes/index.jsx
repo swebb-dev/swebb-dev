@@ -10,8 +10,9 @@ import heroImage from "../assets/images/hero-image.jpg";
 import projectTempImg from "../assets/images/project-temp.jpg";
 
 import { VscLocation } from "react-icons/vsc";
-import { FiGithub } from "react-icons/fi";
 import { IoIosArrowDown } from "react-icons/io";
+
+import { FiGithub, FiMail, FiLinkedin } from "react-icons/fi";
 
 export const Route = createFileRoute('/')({
   component: RouteComponent,
@@ -24,6 +25,8 @@ function RouteComponent() {
   const toggleItem = (id) => {
     setOpenItems((prev) => ({ ...prev, [id]: !prev[id] }));
   };
+
+  const contactEmail = ["sean.s.webb", "proton.me"].join("@");
 
   return (
   <>
@@ -47,7 +50,6 @@ function RouteComponent() {
                 <VscLocation id="location-icon" />
                 <p>Longmont, CO</p>
               </div>
-              {/* <FiGithub id="github-icon" /><a href="https://github.com/swebb-dev" target="_blank" rel="noopener noreferrer"><p>GitHub</p></a> */ /* Maybe I just put the github icon elsewhere. */}
             </div>
           </div>
 
@@ -63,10 +65,11 @@ function RouteComponent() {
             <div class="section-content">
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                I'm an Embedded Systems Engineering graduate student at CU Boulder. I have experience in firmware, PCB design, hardware validation, and bare-metal software. I enjoy working across the full stack of system development, and I have a growing interest in developing systems for research applications. My recent work includes developing automated testing equipment for atom trapping chips through my industry-sponsored capstone project with Infleqtion.
               </p>
+
               <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id. Pretium tellus duis convallis tempus leo eu aenean. Urna tempor pulvinar vivamus fringilla lacus nec metus. Iaculis massa nisl malesuada lacinia integer nunc posuere. Semper vel class aptent taciti sociosqu ad litora. Conubia nostra inceptos himenaeos orci varius natoque penatibus. Dis parturient montes nascetur ridiculus mus donec rhoncus. Nulla molestie mattis scelerisque maximus eget fermentum odio. Purus est efficitur laoreet mauris pharetra vestibulum fusce.
+                Outside of projects, I enjoy exploring new technologies and diving into the details of how hardware and software interact. I also enjoy learning about cutting-edge physics, specifically relating to Condensed Matter Physics, Bose-Einstein Condensates, and Quantum Computing.
               </p>
 
             </div> 
@@ -92,16 +95,22 @@ function RouteComponent() {
                 <p>Expected Graduation: May 2027</p>
 
                 <div class="hidden-text">
-                  <p>This is some hidden text for the first education entry.</p>
+                  <p>Coursework focuses on advanced Embedded Software Development, FPGA Development, PCB Design focusing on Signal Integrity, and Low-Power Embedded System Architecture.</p>
                   <div class="hidden-text-badge-wrapper">
                     <div class="hidden-text-badge">
-                      <p>C/C++ Development</p>
+                      <p>Embedded Systems</p>
                     </div>
                     <div class="hidden-text-badge">
-                      <p>PCB Design</p>
+                      <p>ARM Cortex-M/STM32</p>
                     </div>
                     <div class="hidden-text-badge">
-                      <p>PCB Assembly</p>
+                      <p>PCB Design/Assembly</p>
+                    </div>
+                    <div class="hidden-text-badge">
+                      <p>FPGA Design</p>
+                    </div>
+                    <div class="hidden-text-badge">
+                      <p>Low-Level Firmware</p>
                     </div>
                   </div>
                 </div>
@@ -112,24 +121,30 @@ function RouteComponent() {
 
                 <IoIosArrowDown id="down-arrow-2" class="down-arrow" />
 
-                <h3>B.S. in Computer Engineering</h3>
+                <h3>B.S. in Electrical and Computer Engineering</h3>
                 <p>University of Colorado Boulder</p>
                 <p>Graduated: May 2026</p>
 
                 <div class="hidden-text">
-                  <p>This is some hidden text for the second education entry.</p>
+                  <p>Developed a strong foundation in Embedded Systems, Computer Architecture, Operating Systems, and Low-Level Software Development. Completed an industry-sponsored capstone project with Infleqtion that focused on automated testing for neutral atom trapping hardware.</p>
                   <div class="hidden-text-badge-wrapper">
                     <div class="hidden-text-badge">
-                      <p>Python Development</p>
+                      <p>C/C++ Development</p>
                     </div>
                     <div class="hidden-text-badge">
-                      <p>Circuit Design</p>
+                      <p>Computer Architecture</p>
                     </div>
                     <div class="hidden-text-badge">
-                      <p>Waveform Analysis</p>
+                      <p>Linux Administration</p>
                     </div>
                     <div class="hidden-text-badge">
-                      <p>ARM/NIOS-II Development</p>
+                      <p>Verilog/SystemVerilog</p>
+                    </div>
+                    <div class="hidden-text-badge">
+                      <p>Operating Systems</p>
+                    </div>
+                    <div class="hidden-text-badge">
+                      <p>Concurrent Programming</p>
                     </div>
                   </div>
                 </div>
@@ -145,16 +160,22 @@ function RouteComponent() {
                 <p>Graduated: May 2026</p>
 
                 <div class="hidden-text">
-                  <p>This is some hidden text for the third education entry.</p>
+                  <p>Combined with a Quantum Engineering Minor, I developed a rigorous background in Electromagnetism and Quantum Mechanics. This led to opportunities to work with companies in the precision measurement space.</p>
                   <div class="hidden-text-badge-wrapper">
                     <div class="hidden-text-badge">
-                      <p>Quantum Mechanics</p>
+                      <p>Quantum Mechanics/Hardware</p>
                     </div>
                     <div class="hidden-text-badge">
-                      <p>Python Simulations</p>
+                      <p>Mathematical Modeling/Simulations (Python)</p>
                     </div>
                     <div class="hidden-text-badge">
                       <p>Electromagnetism</p>
+                    </div>
+                    <div class="hidden-text-badge">
+                      <p>Classical Mechanics</p>
+                    </div>
+                    <div class="hidden-text-badge">
+                      <p>Chaotic Dynamics</p>
                     </div>
                   </div>
                 </div>
@@ -163,20 +184,6 @@ function RouteComponent() {
             </div> 
           </div>
         </div>
-
-        {/* 
-
-        Current Section Order/Ideas:
-        
-          Hero
-          About
-          Education
-          Projects
-          Resume
-          Experience
-          Contact
-
-        */}
 
         <div id="content-wrapper">
           <div id="projects" class="main-section stacked-section">
@@ -232,18 +239,95 @@ function RouteComponent() {
 
             <div class="section-content">
 
-              
+              <div class="experience-section-wrapper">
+                <div class="experience-entry">
+                  <div class="experience-marker">
+                    <span class="experience-dot"></span>
+                    <span class="experience-line"></span>
+                  </div>
+                  <div class="experience-content">
+                    <h3>Assistant Teacher</h3>
+                    <h4>Partnerships for Informal Science Education in the Community (PISEC), Boulder</h4>
+                    <h5>Jan. 2025 - May 2025</h5>
+                    <p>Connected with local K-12 students to help engage them in inquiry-based science activities centered around physics.</p>
+                  </div>
+                </div>
+
+                <div class="experience-entry">
+                  <div class="experience-marker">
+                    <span class="experience-dot"></span>
+                    <span class="experience-line"></span>
+                  </div>
+                  <div class="experience-content">
+                    <h3>Student Accountant</h3>
+                    <h4>CU Boulder Bookstore, Boulder</h4>
+                    <h5>Sep. 2023 - June 2024</h5>
+                    <p>Managed billing reconciliation and financial record processing using Excel.</p>
+                  </div>
+                </div>
+
+                <div class="experience-entry">
+                  <div class="experience-marker">
+                    <span class="experience-dot"></span>
+                    <span class="experience-line"></span>
+                  </div>
+                  <div class="experience-content">
+                    <h3>Cybersecurity Event Developer / Organizer</h3>
+                    <h4>Innovation Center, Longmont</h4>
+                    <h5>Aug. 2021 - May 2022</h5>
+                    <p>Team development using Python, LaTeX, and GitHub.</p>
+                  </div>
+                </div>
+
+                <div class="experience-entry">
+                  <div class="experience-marker">
+                    <span class="experience-dot"></span>
+                    <span class="experience-line"></span>
+                  </div>
+                  <div class="experience-content">
+                    <h3>AI Chatbot Developer</h3>
+                    <h4>Innovation Center, Longmont</h4>
+                    <h5>Aug. 2020 - May 2022</h5>
+                    <p>Designed and implemented AI Chatbots using IBM Watson for business and nonprofit clients, often communicating with the business owners directly.</p>
+                  </div>
+                </div>
+              </div>
 
             </div> 
           </div>
         </div>
+
+        <div id="content-wrapper">
+          <div id="contact" class="main-section stacked-section">
+            
+            <div class="section-header">
+              <h2>Contact</h2>
+            </div>
+
+            <div class="section-content">
+
+              <div class="contact-badges">
+                <a class="badge badge-link" href={`mailto:${contactEmail}`}>
+                  <FiMail />
+                  <p>{contactEmail}</p>
+                </a>
+
+                <a class="badge badge-link" href="https://github.com/swebb-dev" target="_blank" rel="noopener noreferrer">
+                  <FiGithub />
+                  <p>GitHub</p>
+                </a>
+
+                <a class="badge badge-link" href="https://www.linkedin.com/in/sean-webb-53930b393/" target="_blank" rel="noopener noreferrer">
+                  <FiLinkedin />
+                  <p>LinkedIn</p>
+                </a>
+              </div>
+
+            </div> 
+          </div>
+        </div>
+
       </div>
-
-
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <p>sss</p>
     </main>
   </>
   );

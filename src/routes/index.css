@@ -316,6 +316,7 @@ body::before {
   flex-direction: row;
   gap: 0.625rem;
   margin: 0;
+  margin-bottom: 0.75rem;
 }
 
 .project-entry {
@@ -381,4 +382,122 @@ body::before {
 .project-entry:hover .project-hidden-text {
   height: 180px;
   margin-top: 0rem;
+}
+
+.project-entry:hover .project-text h3 {
+  color: var(--accent)
+}
+
+.experience-section-wrapper {
+  width: 100%;
+  padding-bottom: 0.75rem;
+}
+ 
+.experience-entry {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  column-gap: 1rem;
+  cursor:pointer;
+}
+ 
+.experience-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.45rem;
+  padding-left: 0.5rem;
+}
+
+.experience-dot {
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  margin-top: 0rem;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-base);
+}
+ 
+.experience-line {
+  flex: 1 1 auto;
+  width: 1px;
+  margin-top: 0rem;
+  margin-bottom: -0.375rem;
+  background: var(--border);
+}
+ 
+.experience-entry:last-child .experience-line {
+  display: none;
+}
+ 
+.experience-content {
+  padding-bottom: 0.75rem;
+}
+ 
+.experience-entry:last-child .experience-content {
+  padding-bottom: 0;
+}
+ 
+.experience-entry:hover .experience-dot {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+ 
+.experience-content h3 {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+ 
+.experience-entry:hover .experience-content h3 {
+  color: var(--accent);
+}
+ 
+.experience-content h4 {
+  margin: 0.3rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+ 
+.experience-content h5 {
+  margin: 0.3rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--accent);
+  opacity: 0.85;
+  letter-spacing: 0.02em;
+}
+ 
+.experience-content p {
+  margin: 0.125rem 0 0;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 56ch;
+}
+
+.contact-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+ 
+.badge-link {
+  text-decoration: none;
+}
+
+.badge-link p {
+  margin:0rem;
+  padding:0rem;
+}
+ 
+.badge-link:hover p {
+  color: var(--accent);
 }
