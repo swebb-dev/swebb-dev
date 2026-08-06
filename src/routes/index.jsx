@@ -9,6 +9,10 @@ import { Helmet } from "react-helmet-async";
 import heroImage from "../assets/images/hero-image.jpg";
 import projectTempImg from "../assets/images/project-temp.jpg";
 
+import project1Img from "../assets/images/burn-in-board.jpg";
+import project2Img from "../assets/images/8051-board.jpg";
+import project3Img from "../assets/images/arduino-board.jpg";
+
 import { VscLocation } from "react-icons/vsc";
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -196,32 +200,32 @@ function RouteComponent() {
 
               <div class="projects-wrapper">
                 <div class="project-entry">
-                  <img src={projectTempImg} alt="" />
+                  <img src={project1Img} alt="" />
                   <div class="project-text">
-                    <h3>Project 1</h3>
+                    <h3>Automated Chip Testing (Infleqtion Capstone)</h3>
                   </div>
                   <div class="project-hidden-text">
-                    <p>This is a description of Project 1.</p>
+                    <p>Shown is one of two boards we used to do automated testing on an Infleqtion Atom Chip. This board did current burn-in testing, sending high current through the chip traces for short periods and measuring the heat dissipation through the chip.</p>
                   </div>
                 </div>
 
                 <div class="project-entry">
-                  <img src={projectTempImg} alt="" />
+                  <img src={project2Img} alt="" />
                   <div class="project-text">
-                    <h3>Project 2</h3>
+                    <h3>8051 Multi-Function System</h3>
                   </div>
                   <div class="project-hidden-text">
-                    <p>This is a description of Project 2.</p>
+                    <p>Shown is a generalized version of an 8051-based Multi-function system. The system has custom support for I2C and SPI interfacing, and a future project utilized this functionality to make a 'Guess Who' game, using a Color LCD display and RFID tags.</p>
                   </div>
                 </div>
 
                 <div class="project-entry">
-                  <img src={projectTempImg} alt="" />
+                  <img src={project3Img} alt="" />
                   <div class="project-text">
-                    <h3>Project 3</h3>
+                    <h3>Low Noise "Golden" Arduino</h3>
                   </div>
                   <div class="project-hidden-text">
-                    <p>This is a description of Project 3.</p>
+                    <p>Shown is version 2 of a custom Arduino. Version 1 focused primarily on getting the lowest noise possible, while Version 2 focused on adding functionality such as precision impedance measurement.</p>
                   </div>
                 </div>
               </div>

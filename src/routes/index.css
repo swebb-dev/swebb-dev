@@ -367,12 +367,13 @@ body::before {
   top:0;
   height: 0;
   overflow: hidden;
+  width:100%;
   transition: height 0.3s ease;
 }
 
 .project-hidden-text p {
   font-family: var(--font-sans);
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-left:0.625rem;
   margin-top:0.375rem;
   margin-bottom:0.625rem;
@@ -500,4 +501,10 @@ body::before {
  
 .badge-link:hover p {
   color: var(--accent);
+}
+
+@media (max-width: 700px) {
+  .project-hidden-text p {
+    font-size: 0.6rem;
+  }
 }
