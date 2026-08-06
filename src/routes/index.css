@@ -219,3 +219,166 @@ body::before {
   color: var(--text-secondary);
   font-size: 1rem;
 }
+
+.education-entry {
+  margin-bottom: 0.75rem;
+  background: rgba(18, 22, 29, 0.8);
+  backdrop-filter: blur(6px);
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+}
+
+.education-entry h3 {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.education-entry:hover {
+  cursor: pointer;
+}
+
+.education-entry:hover h3 {
+  color: var(--accent);
+}
+
+.education-entry p {
+  margin: 0.25rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.hidden-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, margin-top 0.3s ease;
+}
+
+.hidden-text p {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
+
+.education-entry.open .hidden-text {
+  max-height: 200px;
+  margin-top: 0.5rem;
+}
+
+.down-arrow {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  color: var(--accent);
+  transition: transform 0.3s ease;
+}
+
+.education-entry.open .down-arrow {
+  transform: rotate(180deg);
+}
+
+
+.hidden-text-badge-wrapper {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 0.375rem;
+  flex-wrap: wrap;
+}
+
+.hidden-text-badge {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0.625rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(18, 22, 29, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+.hidden-text-badge p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-family: Monospace;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    font-family: Monospace;
+}
+
+.projects-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  margin: 0;
+}
+
+.project-entry {
+  flex: 1;
+  background: rgba(18, 22, 29, 0.8);
+  backdrop-filter: blur(8px);
+  padding: 0;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  padding-bottom: 0rem;
+}
+
+.project-entry:hover {
+  cursor: pointer;
+}
+
+.project-entry img {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 180px;
+  
+  margin-bottom: 0rem;
+  object-fit: cover;
+}
+
+.project-text {
+  padding: 0;
+  margin-left:0.625rem;
+  margin-top:0.375rem;
+  margin-bottom:0rem;
+}
+
+.project-text h3 {
+  padding: 0;
+  margin-left:0rem;
+  margin-top:0rem;
+  margin-bottom:0.625rem;
+}
+
+.project-hidden-text {
+  background: rgba(18, 22, 29, 0.8);
+  backdrop-filter: blur(8px);
+  padding-top:0px;
+  position: absolute;
+  top:0;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.project-hidden-text p {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  margin-left:0.625rem;
+  margin-top:0.375rem;
+  margin-bottom:0.625rem;
+  margin-right:0.625rem;
+}
+
+.project-entry:hover .project-hidden-text {
+  height: 180px;
+  margin-top: 0rem;
+}
