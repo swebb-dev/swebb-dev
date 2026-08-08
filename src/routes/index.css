@@ -504,7 +504,7 @@ body::before {
 }
 
 @media (max-width: 700px) {
-  .project-hidden-text p {
-    font-size: 0.6rem;
+  .projects-wrapper {
+    flex-direction: column;
   }
 }
