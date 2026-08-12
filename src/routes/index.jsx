@@ -147,9 +147,6 @@ function RouteComponent() {
                     <div class="hidden-text-badge">
                       <p>Operating Systems</p>
                     </div>
-                    <div class="hidden-text-badge">
-                      <p>Concurrent Programming</p>
-                    </div>
                   </div>
                 </div>
               </div>

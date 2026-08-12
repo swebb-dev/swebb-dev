@@ -8,7 +8,7 @@ export const NavWrapper = styled.div`
   top: 0;
   left: 0;
   width: 95%;
-  z-index: 100;
+  z-index: 2;
   transform: translateY(${({ $scrollState }) => ($scrollState === "hidden" ? "-200%" : "0")});
   transition: transform 0.3s ease;
   font-family: Monospace;
