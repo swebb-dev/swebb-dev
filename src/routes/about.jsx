@@ -36,11 +36,11 @@ function RouteComponent() {
               <div class="section-content">
   
                 <p>
-                  I'm an Embedded Systems Engineering graduate student at CU Boulder. I have experience in firmware, PCB design, hardware validation, and bare-metal software. I enjoy working across the full stack of system development, and I have a growing interest in developing systems for research applications. My recent work includes developing automated testing equipment for atom trapping chips through my industry-sponsored capstone project with Infleqtion.
+                  This page is currently being worked on.
                 </p>
 
                 <p>
-                  Outside of projects, I enjoy exploring new technologies and diving into the details of how hardware and software interact. I also enjoy learning about cutting-edge physics, specifically relating to Condensed Matter Physics, Bose-Einstein Condensates, and Quantum Computing.
+                  
                 </p>
   
               </div> 

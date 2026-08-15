@@ -10,6 +10,8 @@ import heroImage from "../assets/images/hero-image.jpg";
 import projectTempImg from "../assets/images/project-temp.jpg";
 
 import project1Img from "../assets/images/burn-in-board.jpg";
+import project1Img2 from "../assets/images/rmap-board.jpg";
+import project1Img3 from "../assets/images/daughter-board.jpg";
 import project2Img from "../assets/images/8051-board.jpg";
 import project3Img from "../assets/images/arduino-board.jpg";
 
@@ -18,6 +20,38 @@ import { IoIosArrowDown } from "react-icons/io";
 
 import { FiGithub, FiMail, FiLinkedin } from "react-icons/fi";
 
+import { ProjectPopup } from "../assets/Popup/index.jsx";
+
+const projects = [
+  {
+    id: "project-1",
+    images: [project1Img, project1Img2, project1Img3],
+    title: "Automated Chip Testing (Infleqtion Capstone)",
+    description: "My senior capstone project was to create an automated chip testing apparatus to quickly and efficiently test Infleqtion's industry atom-trapping chips. Above are the three boards I designed and assembled for this project. All circuit design, hardware testing, PCB design/assembly, and Firmware was done entirely by me. The project uses a Raspberry Pi to interface with all of the hardware components.\n\nThe first board sends a high current into different chip traces on the test chip in short pulses, and using a thermal camera, we can visualize the heat dissipation through the chip in order to find any cracks in the silicon. One challenge with this process is that the bottom of the chip is not coated in Gold (Copper instead). This is because Gold reacts with the atom that's being trapped (Rubidium), and as a result, the chip will oxidize during a high current load. To get around this issue, the chip is mounted and Forming Gas (or Nitrogen) is constantly fed through the underside of the chip during this process.\n\nThe second board uses variable current sources to accurately map out a wide range of impedances (roughly 1Ω-3MΩ with <1% error across that range) between traces on the chip. This was used to ensure that nothing was shorted or open on the chip, and that each electrical connection was working as expected. The firmware automatically tries the lowest current source possible, and only steps up the current if it's safe to do so. Measurement takes roughly 0.25 seconds for each chip trace, much faster than the previous manual method.\n\nThe third board is a simple daughter board that connects the chip to the other boards, which is positioned to slot above the current burn-in apparatus.",
+    shortdescription: "Shown is one of two boards we used to do automated testing on an Infleqtion Atom Chip. This board did current burn-in testing, sending high current through the chip traces for short periods and measuring the heat dissipation through the chip.",
+    tags: ["Firmware", "PCB Design", "PCB Assembly", "Test Automation"],
+    link: "",
+  },
+  {
+    id: "project-2",
+    images: [project2Img],
+    title: "8051 Multi-Function System",
+    description: "This page is currently being worked on.",
+    shortdescription: "Shown is a generalized version of an 8051-based Multi-function system. The system has custom support for I2C and SPI interfacing, and a future project utilized this functionality to make a 'Guess Who' game, using a Color LCD display and RFID tags.",
+    tags: ["ARM Assembly", "I2C and SPI Drivers", "RFID Interfacing"],
+    link: "",
+  },
+  {
+    id: "project-3",
+    images: [project3Img],
+    title: 'Low Noise "Golden" Arduino',
+    description: "This page is currently being worked on.",
+    shortdescription: "Shown is version 2 of a custom Arduino. Version 1 focused primarily on getting the lowest noise possible, while Version 2 focused on adding functionality such as precision impedance measurement.",
+    tags: ["PCB Design", "PCB Assembly", "Signal Integrity"],
+    link: "",
+  },
+];
+
 export const Route = createFileRoute('/')({
   component: RouteComponent,
 })
@@ -25,6 +59,7 @@ export const Route = createFileRoute('/')({
 function RouteComponent() {
 
   const [openItems, setOpenItems] = useState({});
+  const [activeProject, setActiveProject] = useState(null);
 
   const toggleItem = (id) => {
     setOpenItems((prev) => ({ ...prev, [id]: !prev[id] }));
@@ -89,8 +124,7 @@ function RouteComponent() {
 
             <div class="section-content">
 
-              <div class={`education-entry${openItems["edu-1"] ? " open" : ""}`}
-                onClick={() => toggleItem("edu-1")}>
+              <div class={`education-entry${openItems["edu-1"] ? " open" : ""}`} onClick={() => toggleItem("edu-1")}>
 
                 <IoIosArrowDown id="down-arrow-1" class="down-arrow" />
                 
@@ -120,8 +154,7 @@ function RouteComponent() {
                 </div>
               </div>
 
-              <div class={`education-entry${openItems["edu-2"] ? " open" : ""}`}
-                onClick={() => toggleItem("edu-2")}>
+              <div class={`education-entry${openItems["edu-2"] ? " open" : ""}`} onClick={() => toggleItem("edu-2")}>
 
                 <IoIosArrowDown id="down-arrow-2" class="down-arrow" />
 
@@ -151,8 +184,7 @@ function RouteComponent() {
                 </div>
               </div>
 
-              <div class={`education-entry${openItems["edu-3"] ? " open" : ""}`}
-                onClick={() => toggleItem("edu-3")}>
+              <div class={`education-entry${openItems["edu-3"] ? " open" : ""}`} onClick={() => toggleItem("edu-3")}>
 
                 <IoIosArrowDown id="down-arrow-3" class="down-arrow" />
 
@@ -187,49 +219,31 @@ function RouteComponent() {
         </div>
 
         <div id="content-wrapper">
-          <div id="projects" class="main-section stacked-section">
-            
-            <div class="section-header">
-              <h2>Projects</h2>
+        <div id="projects" class="main-section stacked-section">
+
+          <div class="section-header">
+            <h2>Projects</h2>
+          </div>
+
+          <div class="section-content">
+
+            <div class="projects-wrapper">
+              {projects.map((project) => (
+                <div class="project-entry" key={project.id} onClick={() => setActiveProject(project)}>
+                  <img src={project.images[0]} alt={project.title} />
+                  <div class="project-text">
+                    <h3>{project.title}</h3>
+                  </div>
+                  <div class="project-hidden-text">
+                    <p>{project.shortdescription}</p>
+                  </div>
+                </div>
+              ))}
             </div>
 
-            <div class="section-content">
-
-              <div class="projects-wrapper">
-                <div class="project-entry">
-                  <img src={project1Img} alt="" />
-                  <div class="project-text">
-                    <h3>Automated Chip Testing (Infleqtion Capstone)</h3>
-                  </div>
-                  <div class="project-hidden-text">
-                    <p>Shown is one of two boards we used to do automated testing on an Infleqtion Atom Chip. This board did current burn-in testing, sending high current through the chip traces for short periods and measuring the heat dissipation through the chip.</p>
-                  </div>
-                </div>
-
-                <div class="project-entry">
-                  <img src={project2Img} alt="" />
-                  <div class="project-text">
-                    <h3>8051 Multi-Function System</h3>
-                  </div>
-                  <div class="project-hidden-text">
-                    <p>Shown is a generalized version of an 8051-based Multi-function system. The system has custom support for I2C and SPI interfacing, and a future project utilized this functionality to make a 'Guess Who' game, using a Color LCD display and RFID tags.</p>
-                  </div>
-                </div>
-
-                <div class="project-entry">
-                  <img src={project3Img} alt="" />
-                  <div class="project-text">
-                    <h3>Low Noise "Golden" Arduino</h3>
-                  </div>
-                  <div class="project-hidden-text">
-                    <p>Shown is version 2 of a custom Arduino. Version 1 focused primarily on getting the lowest noise possible, while Version 2 focused on adding functionality such as precision impedance measurement.</p>
-                  </div>
-                </div>
-              </div>
-
-            </div> 
           </div>
         </div>
+      </div>
 
         <div id="content-wrapper">
           <div id="experience" class="main-section stacked-section">
@@ -327,6 +341,8 @@ function RouteComponent() {
             </div> 
           </div>
         </div>
+
+        <ProjectPopup project={activeProject} onClose={() => setActiveProject(null)} />
 
       </div>
     </main>

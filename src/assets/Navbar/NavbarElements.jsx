@@ -1,5 +1,7 @@
 // Navbar/NavbarElements.jsx
 
+// Not sure why I separated this (w3schools tutorial lol), in the future I'm just going to use index.css. Easier.
+
 import styled from "styled-components";
 import { Link } from '@tanstack/react-router';
 
