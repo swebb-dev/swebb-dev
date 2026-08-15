@@ -9,6 +9,7 @@ import project1Img from "../assets/images/burn-in-board.jpg";
 import project1Img2 from "../assets/images/rmap-board.jpg";
 import project1Img3 from "../assets/images/daughter-board.jpg";
 import project2Img from "../assets/images/8051-board.jpg";
+import project2Img2 from "../assets/images/8051-board-back.jpg";
 import project3Img from "../assets/images/arduino-board.jpg";
 
 import { ProjectPopup } from "../assets/Popup/index.jsx";
@@ -25,7 +26,7 @@ const projects = [
   },
   {
     id: "project-2",
-    images: [project2Img],
+    images: [project2Img, project2Img2],
     title: "8051 Multi-Function System",
     description: "This page is currently being worked on.",
     shortdescription: "Shown is a generalized version of an 8051-based Multi-function system. The system has custom support for I2C and SPI interfacing, and a future project utilized this functionality to make a 'Guess Who' game, using a Color LCD display and RFID tags.",
