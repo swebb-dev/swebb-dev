@@ -15,6 +15,7 @@ import project1Img3 from "../assets/images/daughter-board.jpg";
 import project2Img from "../assets/images/8051-board.jpg";
 import project2Img2 from "../assets/images/8051-board-back.jpg";
 import project3Img from "../assets/images/arduino-board.jpg";
+import project3Img2 from "../assets/images/arduino-board-2.jpg";
 
 import { VscLocation } from "react-icons/vsc";
 import { IoIosArrowDown } from "react-icons/io";
@@ -37,16 +38,16 @@ const projects = [
     id: "project-2",
     images: [project2Img, project2Img2],
     title: "8051 Multi-Function System",
-    description: "This page is currently being worked on.",
+    description: "This project is a proof of concept for getting an old architecture to be compatible with newer hardware, as well as being a personal introduction to non-STM ARM devices. The pictures shown include only the barebones functionality of the system (Memory Interfacing, I2C, SPI, and Serial Devices working) and the only components attached are an old LCD display and a modern ADC (Analog to Digital Converter). Later, I added RFID and a newer touchscreen LCD and created a proof of concept for a 'Guess Who' game utilizing the hardware.\n\nAll the code is available on the GitHub linked below!",
     shortdescription: "Shown is a generalized version of an 8051-based Multi-function system. The system has custom support for I2C and SPI interfacing, and a future project utilized this functionality to make a 'Guess Who' game, using a Color LCD display and RFID tags.",
     tags: ["ARM Assembly", "I2C and SPI Drivers", "RFID Interfacing"],
     link: "",
   },
   {
     id: "project-3",
-    images: [project3Img],
+    images: [project3Img, project3Img2],
     title: 'Low Noise "Golden" Arduino',
-    description: "This page is currently being worked on.",
+    description: "This was one of my first PCB Projects. It is an attempt at mirroring the functionality of the commercial Arduino UNO. For previous versions of the project, I focused more on signal integrity and maximizing its use case. In that version, I achieved much less noise than the off-the-shelf Arduino, while offering the same functionality. In this version, the focus shifted to offering on-board functionality, such as precision Impedance Measurement, Smart LEDs, and a buzzer!",
     shortdescription: "Shown is version 2 of a custom Arduino. Version 1 focused primarily on getting the lowest noise possible, while Version 2 focused on adding functionality such as precision impedance measurement.",
     tags: ["PCB Design", "PCB Assembly", "Signal Integrity"],
     link: "",
@@ -256,6 +257,19 @@ function RouteComponent() {
             <div class="section-content">
 
               <div class="experience-section-wrapper">
+                <div class="experience-entry">
+                  <div class="experience-marker">
+                    <span class="experience-dot"></span>
+                    <span class="experience-line"></span>
+                  </div>
+                  <div class="experience-content">
+                    <h3>Course Assistant (MCEN 3017 - Circuits and Electronics for Mechanical Engineers)</h3>
+                    <h4>University of Colorado, Boulder</h4>
+                    <h5>Aug. 2026 - Present</h5>
+                    <p>Help students with homework, exam prep, and lab projects, as well as grade assignments and tests.</p>
+                  </div>
+                </div>
+
                 <div class="experience-entry">
                   <div class="experience-marker">
                     <span class="experience-dot"></span>
