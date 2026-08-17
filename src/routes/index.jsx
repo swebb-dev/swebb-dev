@@ -305,7 +305,7 @@ function RouteComponent() {
                     <h3>Cybersecurity Event Developer / Organizer</h3>
                     <h4>Innovation Center, Longmont</h4>
                     <h5>Aug. 2021 - May 2022</h5>
-                    <p>Team development using Python, LaTeX, and GitHub.</p>
+                    <p>Helped develop a website and linux backend for local teams to interact with our own hosted cybersecurity event, displaying information, scoring teams, communicating with judges, and displaying a leaderboard.</p>
                   </div>
                 </div>
 
